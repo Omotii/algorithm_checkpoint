@@ -1,0 +1,24 @@
+ALGORITHM sentence_reader
+VAR
+    sentence = STRING;
+    countLetter = INTEGER :=0;
+    countWord = INTEGER := 0;
+    countVowel = INTEGER :=0;
+BEGIN
+    FOR     
+        IF (sentence = CHARACTER not .) //loop expected to count the number of characters in the sentence
+        countLetter = countLetter + 1;
+    END_FOR
+    FOR     
+        IF (sentence = STRING not .)  //loop expected to count the number of words in the sentence
+        countWord = countWord + 1;
+    END_FOR
+    FOR     
+        IF (sentence = /aeiou/)  //loop expected to count the number of vowels in the sentence.
+        countVowel = countVowel + 1;
+    END_FOR
+END
+
+write(countLetter);
+write(countWord);
+write(countVowel);
